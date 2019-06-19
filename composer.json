@@ -1,0 +1,38 @@
+{
+    "name": "mazecode/package-creator",
+    "description": "Generate and add Laravel packages to your project",
+    "type": "library",
+    "keywords": ["Laravel", "package", "creator"],
+    "license": "MIT",
+    "homepage": "https://github.com/mazecode/package-creator",
+    "authors": [{
+        "name": "Diego Feliú",
+        "email": "dfeliud@gmail.com",
+        "homepage": "https://github.com/mazecode"
+    }],
+    "require": {
+        "php": "^7.1.3",
+        "illuminate/support": "^5.5",
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7",
+        "orchestra/testbench": "3.8.x"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mazecode\\PackageCreator\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mazecode\\PackageCreator\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mazecode\\PackageCreator\\PackageCreatorServiceProvider"
+            ]
+        }
+    }
+},

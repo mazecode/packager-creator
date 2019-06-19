@@ -1,0 +1,52 @@
+{
+    "name": ":vendor_name/:package_name",
+    "description": ":package_description",
+    "keywords": [
+        ":vendor_name",
+        ":package_name"
+    ],
+    "homepage": "https://github.com/:vendor_name/:package_name",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": ":author_name",
+            "email": ":author_email",
+            "homepage": ":author_website",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "illuminate/support": "~5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7",
+        "orchestra/testbench": "^3.8",
+    },
+    "autoload": {
+        "psr-4": {
+            ":VendorName\\:PackageName\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            ":VendorName\\:PackageName\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                ":uc:vendor\\:uc:package\\:uc:packageServiceProvider"
+            ],
+            "aliases": {
+                ":uc:package": ":uc:vendor\\:uc:package\\Facades\\:uc:package"
+            }
+        }
+    }
+}
